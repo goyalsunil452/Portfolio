@@ -11,6 +11,8 @@ import { PortfolioComponent } from './portfolio/portfolio.component';
 import { FooterComponent } from './footer/footer.component';
 import { PricingComponent } from './pricing/pricing.component';
 import { ContactComponent } from './contact/contact.component';
+import { CommonModule } from '@angular/common';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -25,9 +27,21 @@ import { ContactComponent } from './contact/contact.component';
     ContactComponent
   ],
   imports: [
+    ReactiveFormsModule,
+    CommonModule,
     BrowserModule,
     AppRoutingModule
   ],
+  exports:[    
+    AppComponent,
+    HeaderComponent,
+    HomeComponent,
+    AboutComponent,
+    ServiceComponent,
+    PortfolioComponent,
+    FooterComponent,
+    PricingComponent,
+    ContactComponent],
   providers: [],
   bootstrap: [AppComponent]
 })

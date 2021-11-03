@@ -3,6 +3,7 @@
 footer
 {
     background-color: var(--main-color);
+    padding-top: 20px;
 }
 footer .copyright-text
 {
@@ -11,4 +12,15 @@ footer .copyright-text
     color: var(--black-100);
     font-weight: 300;
     margin: 10px 0 0;
+    cursor: pointer;
+}
+.footer-content{
+    display: flex;
+    
+}
+.list-item{
+    justify-content: space-between;
+    margin-left: 36px;
+    color: var(--black-100);
+    cursor: pointer;
 }

@@ -2,6 +2,7 @@
 .navbar
 {
     position: fixed;
+    background-color: var(--main-color);
     z-index: 999;
     width: 100%;
     padding: 25px;
@@ -11,30 +12,40 @@
 {
     justify-content: space-between;
 }
-.navbar.sticky
-{
-    padding: 12px 25px;
+.sticky
+{   z-index: 999;
+    width: 100%;
+    position: fixed;
+    padding: 10px 25px;
     background-color: var(--white);
     box-shadow: var(--shadow-black-100);
 }
-.navbar .logo a
+.navbar .logo a,
+.sticky .logo a
 {
     font-size: 24px;
     color: var(--black-900);
     font-weight: 600;
     text-transform: capitalize;
 }
-.navbar .logo a span
+
+.navbar .logo a span{
+    color: var(--white);
+
+}
+.sticky .logo a span
 {
     color: var(--main-color);
 }
-.navbar .menu .nav-item
+.navbar .menu .nav-item,
+.sticky .menu .nav-item
 {
     display: inline-block;
     position: relative;
     margin-left: 36px;
 }
-.navbar .menu .nav-item .nav-link
+.navbar .menu .nav-item .nav-link,
+.sticky .menu .nav-item .nav-link
 {
     color: var(--white);
     font-size: 16px;
@@ -43,11 +54,12 @@
     text-transform: capitalize;
     padding: 10px 0;
 }
-.navbar.sticky .menu .nav-item .nav-link
+.sticky .menu .nav-item .nav-link
 {
     color: var(--main-color);
 }
-.navbar .nav-item .nav-link span
+.navbar .nav-item .nav-link span,
+.sticky .nav-item .nav-link span
 {
     width: 0;
     height: 2px;
@@ -69,6 +81,23 @@
     background-color: var(--white);
     left: 110%;
 }
+.sticky .nav-item .nav-link span::before
+{
+    position: absolute;
+    content: '';
+    width: 0;
+    height: 2px;
+    background-color: var(--main-color);
+    left: 110%;
+}
+.sticky .nav-item .nav-link span::after{
+    position: absolute;
+    content: '';
+    width: 0;
+    height: 2px;
+    background-color: var(--main-color);
+    left: 140%;
+}
 .navbar .nav-item .nav-link span::after
 {
     position: absolute;
@@ -78,21 +107,25 @@
     background-color: var(--white);
     left: 140%;
 }
-.navbar.sticky .nav-item a span,.navbar.sticky .nav-item a span::before,.navbar.sticky .nav-item a span::after
+.sticky .nav-item a span,.sticky .nav-item a span::before,.sticky .nav-item a span::after
 {
     background-color: var(--main-color);
 }
-.navbar .nav-item > .nav-link.active span,.navbar .nav-item:hover > .nav-link span
+.navbar .nav-item > .nav-link.active span,.navbar .nav-item:hover > .nav-link span,
+.sticky .nav-item > .nav-link.active span,.navbar .nav-item:hover > .nav-link span
 {
     opacity: 1;
     visibility: visible;
     width: 60%;
 }
-.navbar .nav-item > .nav-link.active span::before,.navbar .nav-item:hover > .nav-link span::before
+.navbar .nav-item > .nav-link.active span::before,.navbar .nav-item:hover > .nav-link span::before,
+.sticky .nav-item > .nav-link.active span::before,.navbar .nav-item:hover > .nav-link span::before
 {
     width: 20%;
 }
-.navbar .nav-item > .nav-link.active span::after,.navbar .nav-item:hover > .nav-link span::after
+.navbar .nav-item > .nav-link.active span::after,.navbar .nav-item:hover > .nav-link span::after,
+.sticky .nav-item > .nav-link.active span::after,.navbar .nav-item:hover > .nav-link span::after
+
 {
     width: 15%;
 }
@@ -110,7 +143,7 @@
     font-size: 17px;
     display: none;
 }
-.navbar.sticky .menu-btn
+.sticky .menu-btn
 {
     color: var(--main-color);
     background-color: var(--white);
