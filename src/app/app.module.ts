@@ -13,6 +13,7 @@ import { PricingComponent } from './pricing/pricing.component';
 import { ContactComponent } from './contact/contact.component';
 import { CommonModule } from '@angular/common';
 import { ReactiveFormsModule } from '@angular/forms';
+import { EducationComponent } from './education/education.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     PortfolioComponent,
     FooterComponent,
     PricingComponent,
-    ContactComponent
+    ContactComponent,
+    EducationComponent
   ],
   imports: [
     ReactiveFormsModule,
