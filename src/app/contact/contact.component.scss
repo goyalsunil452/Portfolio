@@ -91,3 +91,15 @@
     text-align: right;
     padding: 0 15px;
 }
+
+@media(max-width: 767px)
+{
+    .contact-section .contact-item
+    {
+        flex: 0 1 100%;
+        max-width: 100%;
+        padding: 20px;
+        display: flex;
+        flex-wrap: wrap;
+    }
+}

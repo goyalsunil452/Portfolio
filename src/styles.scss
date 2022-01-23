@@ -371,7 +371,15 @@ img
 {
     .header-social
     {
-        left: 85%;
+        display: flex;
+        top: 90%;
+        left: 30%;
+        transform: translateY(-53%);
+        border: 1px solid rgba(0,167,142,0.21);
+        border-radius: 50px;
+        li {
+            flex: 1;
+        }
     }
     .service-section .service-item,
     .portfolio .portfolio-item,

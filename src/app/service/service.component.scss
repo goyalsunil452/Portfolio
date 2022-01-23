@@ -75,3 +75,15 @@
 {
     color: var(--black-100);
 }
+
+@media(max-width: 767px)
+{
+    .service-section .service-item
+    {
+        flex: 0 1 100%;
+        max-width: 50%;
+        padding: 20px;
+        display: flex;
+        flex-wrap: wrap;
+    }
+}

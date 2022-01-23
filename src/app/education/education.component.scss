@@ -162,3 +162,18 @@
 .project{
     justify-content: center;
 }
+
+@media(max-width: 767px)
+{
+    .about-container{
+        flex: 0 1 100%;
+        box-shadow: var(--shadow-black-100);
+        padding: 50px 15px;
+        margin: 0px 20px 40px 20px;
+        border-radius: 10px;
+        width: 100%;
+        text-align: center;
+        transition: all 0.3s ease;
+        cursor: pointer;
+    }
+}
