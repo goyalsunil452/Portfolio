@@ -11,5 +11,11 @@ export class HomeComponent implements OnInit {
 
   ngOnInit(): void {
   }
+  openUrls(url:any){
+    const w =  window.open(url, '_blank');
+    if (w) {
+        w.focus(); // okay now
+    }
+  }
 
 }
