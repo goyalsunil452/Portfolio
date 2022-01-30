@@ -1,3 +1,4 @@
+import { environment } from './../environments/environment';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
@@ -14,6 +15,9 @@ import { ContactComponent } from './contact/contact.component';
 import { CommonModule } from '@angular/common';
 import { ReactiveFormsModule } from '@angular/forms';
 import { EducationComponent } from './education/education.component';
+import { HttpClientModule } from '@angular/common/http';
+import { AngularFireModule } from 'angularfire2';
+import { AngularFireDatabaseModule } from 'angularfire2/database'
 
 @NgModule({
   declarations: [
@@ -26,13 +30,17 @@ import { EducationComponent } from './education/education.component';
     FooterComponent,
     PricingComponent,
     ContactComponent,
-    EducationComponent
+    EducationComponent,
   ],
   imports: [
     ReactiveFormsModule,
     CommonModule,
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule,
+    HttpClientModule,
+    //AngularFireModule.initializeApp(environment.firebase),
+    //AngularFireDatabaseModule
   ],
   exports:[    
     AppComponent,
