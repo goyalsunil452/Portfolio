@@ -27,7 +27,8 @@ export class ContactComponent implements OnInit {
   constructor(  
     private router: Router,
     private httpClient: HttpClient,
-    private servicEndPoint : serviceEndPoint
+    private servicEndPoint : serviceEndPoint,
+    private dialog: MatDialog
     ) {
   }
 
