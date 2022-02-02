@@ -1,10 +1,11 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, TemplateRef } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Observable, Subject } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 import { Router } from '@angular/router';
 import { serviceEndPoint } from '../app.service';
 import { takeUntil } from 'rxjs/operators';
+import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
 declare let Email: any;
 @Component({
   selector: 'app-contact',
@@ -61,6 +62,15 @@ export class ContactComponent implements OnInit {
       }).then(
         (message:any) => alert(message)
       );
+  }
+
+  openDialog(mydialog: TemplateRef<any>): void {
+    const dialogRef = this.dialog.open(mydialog, {
+      width: '250px'});
+  
+    dialogRef.afterClosed().subscribe(result => {
+      console.log('The dialog was closed');
+    });
   }
 
   ngOnDestroy(): void {
