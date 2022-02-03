@@ -25,6 +25,16 @@
     font-size: 25px;
     color: var(--main-color);
 }
+
+.contact-section .contact-item-inner .fas::before
+{
+    position: absolute;
+    /* height: 10px; */
+    /* content: ""; */
+    /* background-color: var(--main-color); */
+    font-family: "Font Awesome 5 Free";
+    margin: -10px 10px 10px -9px;
+}
 .contact-section .contact-item-inner span
 {
     display: block;

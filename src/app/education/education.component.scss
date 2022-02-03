@@ -1,4 +1,8 @@
 /*===== About =====*/
+section{
+    background-color: var(--black-100);
+
+}
 .about-section .about-image,
 .about-section .about-content
 {
@@ -161,6 +165,7 @@
 }
 .project{
     justify-content: center;
+    font-family: var(--font-family);
 }
 
 @media(max-width: 767px)

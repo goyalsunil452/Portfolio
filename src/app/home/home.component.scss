@@ -16,6 +16,10 @@
     border: 1px solid rgba(0,167,142,0.21);
     border-radius: 50px;
 }
+.header-social .fab::before
+{
+    font-family: 'Font Awesome 5 Brands';
+}
 .header-social li a 
 {
     font-size: 18px;
@@ -35,7 +39,8 @@
     flex: 1;
     max-width: 100%;
     padding: 30px 30px 200px 25px;
-    padding-bottom:200px;
+    padding-bottom: 150px;
+    margin: 50px 0px 0px 20px;
 }
 .home-section .home-text h4
 {
@@ -43,6 +48,7 @@
     font-weight: 600;
     letter-spacing: 4px;
     color: var(--main-color);
+    font-family: var(--font-family);
 }
 .home-section .home-text h1
 {
@@ -98,7 +104,38 @@
     left: 0;
 }
 
-@media(max-width: 767px)
+@media(max-width: 1295px)
+{
+    .header-social
+    {
+        display: flex;
+        top: 90%;
+        left: 44%;
+        transform: translateY(-53%);
+        border: 1px solid rgba(0,167,142,0.21);
+        border-radius: 50px;
+        li {
+            flex: 1;
+        }
+    }
+}
+@media(max-width: 900px)
+{
+    .header-social
+    {
+        display: flex;
+        top: 90%;
+        left: 40%;
+        transform: translateY(-53%);
+        border: 1px solid rgba(0,167,142,0.21);
+        border-radius: 50px;
+        margin-left: 0px;
+        li {
+            flex: 1;
+        }
+    }
+}
+@media(max-width: 600px)
 {
     .header-social
     {
@@ -108,6 +145,7 @@
         transform: translateY(-53%);
         border: 1px solid rgba(0,167,142,0.21);
         border-radius: 50px;
+        margin-left: 0px;
         li {
             flex: 1;
         }

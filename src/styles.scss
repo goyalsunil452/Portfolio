@@ -1,7 +1,8 @@
 
 // Custom Theming for Angular Material
 // For more information: https://material.angular.io/guide/theming
-@import '~@angular/material/theming';
+ @import '~@angular/material/theming';
+ @import '~ngx-toastr/toastr.css';
 // Plus imports for other components in your app.
 
 // Include the common styles for Angular Material. We include this here so that you only
@@ -46,13 +47,14 @@ html
     --shadow-black-100:0 5px 15px rgba(0,0,0,0.2);
     --black-900:#000;
     --black-400:#646f87;
-    --black-100:#f7f7f7;
+    --black-100:#fff;
     --white:#fff;
     --black-alpha-100:rgba(0,0,0,.05);
+    --font-family: "Kaushan Script";
 }
 body
 {
-    font-family: "Kaushan Script", cursive;
+    font-family: "Kaushan Script", cursive !important;
     font-size: 16px;
     font-weight: normal;
     overflow-x: hidden;
@@ -64,6 +66,7 @@ body
     padding: 0;
     box-sizing: border-box;
     text-decoration: none;
+    font-family: "Kaushan Script" !important;
 }
 ul
 {
@@ -428,4 +431,12 @@ img
     }
 }
 html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif !important; }
+
+.mat-typography{
+    font-family:"Kaushan Script" !important
+}
+
+#toast-container > div {
+    opacity:1;
+}

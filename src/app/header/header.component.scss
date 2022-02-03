@@ -20,6 +20,11 @@
     background-color: var(--white);
     box-shadow: var(--shadow-black-100);
 }
+.navbar .logo,
+.sticky .logo
+{
+    margin-top: 7px;
+}
 .navbar .logo a,
 .sticky .logo a
 {
@@ -27,6 +32,9 @@
     color: var(--black-900);
     font-weight: 600;
     text-transform: capitalize;
+    text-decoration: none;
+    font-family: var(--font-family);
+    box-sizing: border-box;
 }
 
 .navbar .logo a span{
@@ -43,6 +51,7 @@
     display: inline-block;
     position: relative;
     margin-left: 36px;
+    text-decoration: none;
 }
 .navbar .menu .nav-item .nav-link,
 .sticky .menu .nav-item .nav-link

@@ -1,3 +1,5 @@
+
+
 import { environment } from './../environments/environment';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
@@ -28,6 +30,8 @@ import { provideRemoteConfig,getRemoteConfig } from '@angular/fire/remote-config
 import { provideStorage,getStorage } from '@angular/fire/storage';
 import { MatSliderModule } from '@angular/material/slider';
 import { MatDialogModule } from '@angular/material/dialog';
+import { ToastrModule } from 'ngx-toastr';
+import { SkillsComponent } from './skills/skills.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -40,6 +44,7 @@ import { MatDialogModule } from '@angular/material/dialog';
     PricingComponent,
     ContactComponent,
     EducationComponent,
+    SkillsComponent,
   ],
   imports: [
     ReactiveFormsModule,
@@ -51,6 +56,10 @@ import { MatDialogModule } from '@angular/material/dialog';
     BrowserAnimationsModule,
     MatSliderModule,
     MatDialogModule,
+    ToastrModule.forRoot({
+      timeOut: 5000, // 15 seconds
+      positionClass: 'toast-top-right'
+    }),
     provideFirebaseApp(() => initializeApp(environment.firebase)),
     provideAnalytics(() => getAnalytics()),
     provideAuth(() => getAuth()),
