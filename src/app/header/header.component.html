@@ -21,24 +21,25 @@
 
 <div [ngClass]="{'navbar':scrollY ,'sticky':!scrollY}">
     <div class="container">
-        <div class="row justify-content-between">
+        <div class="row justify-content-between header-head ">
             <div class="logo"><a href="index.html">WEB<span>Developer</span></a></div>
-            <div class="links">
-                <ul class="menu">
+            <div class="container-box" *ngIf="!scrollY" [ngClass]="{'menu-expanded':openMenuFlag }">
+                <div class="menu-box" (click)="openMenu()">
+                    <span class="line one"></span>
+                    <span class="line two"></span>
+                    <span class="line three"></span>
+                </div>
+            </div>
+            <div class="links" *ngIf="openMenuFlag">
+                <ul class="menu menu-items">
                     <li class="nav-item"><a href="#home" class="nav-link ">Home <span></span></a></li>
                     <li class="nav-item"><a href="#skills" class="nav-link">Skills <span></span></a></li>
                     <li class="nav-item"><a href="#education" class="nav-link">Education <span></span></a></li>
-                    <li class="nav-item"><a href="#about" class="nav-link">Projects <span></span></a></li>
+                    <!-- <li class="nav-item"><a href="#about" class="nav-link">Projects <span></span></a></li> -->
                     <li class="nav-item"><a href="#services" class="nav-link">Services <span></span></a></li>
                     <!-- <li class="nav-item"><a href="#pricing" class="nav-link">Pricing <span></span></a></li> -->
                     <li class="nav-item"><a href="#contact" class="nav-link">Contact <span></span></a></li>
                 </ul>
-            </div>
-            <div class="nav__toggle" id="nav-toggle">
-                <i class='bx bx-menu'></i>
-            </div>
-            <div class="menu-btn">
-                <i class="fas fa-bars"></i>
             </div>
         </div>
     </div>

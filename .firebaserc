@@ -1,14 +1,5 @@
 {
   "projects": {
     "default": "portfolio-sunil"
-  },
-  "targets": {
-    "portfolio-sunil": {
-      "hosting": {
-        "app": [
-          "portfolio-sunil"
-        ]
-      }
-    }
   }
 }

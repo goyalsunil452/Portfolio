@@ -10,6 +10,7 @@ import { NgModule } from '@angular/core';
 
 export class HeaderComponent implements OnInit,OnDestroy {
   scrollY=true;
+  openMenuFlag=false;
   constructor(private renderer2: Renderer2) { 
    
   }
@@ -24,7 +25,9 @@ export class HeaderComponent implements OnInit,OnDestroy {
       }
     }
   }
-
+  openMenu(){
+    this.openMenuFlag=!this.openMenuFlag;
+  }
   ngOnDestroy(): void {
   }
 }
